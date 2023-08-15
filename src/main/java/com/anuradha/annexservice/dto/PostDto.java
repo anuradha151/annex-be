@@ -1,14 +1,21 @@
 package com.anuradha.annexservice.dto;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-public record PostDto(
-        UUID id,
-        String name,
-        String desc,
-        String contactNumber,
-        LocalDateTime createdAt,
-        LocalDateTime updatedAt
-) {
+import java.time.LocalDateTime;
+
+@Setter
+@Getter
+@ToString
+public class PostDto {
+
+    private String id;
+    private String name;
+    private String description;
+    private String contactNumber;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
 }
