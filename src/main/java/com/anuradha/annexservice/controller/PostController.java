@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class PostController {
 
+
     private final PostService postService;
 
     @PostMapping
-    public PostDto save(@RequestBody PostDto postDto) {
+    public PostDto save(@RequestParam String putha,String kawwa, @RequestBody PostDto postDto) {
         return postService.save(postDto);
     }
 
